@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewApi"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/lblNameApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif"
+        android:text="TextView"
+        android:textColor="@color/blue600"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewApi"
+        app:layout_constraintStart_toEndOf="@+id/imageViewApi"
+        app:layout_constraintTop_toTopOf="@+id/imageViewApi" />
+
+    <ImageButton
+        android:id="@+id/imageButtonEditApi"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bordes_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/lblNameApi"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDeleteApi"
+        app:layout_constraintTop_toTopOf="@+id/lblNameApi"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/baseline_mode_edit_outline_24" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDeleteApi"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bordes_btn_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonEditApi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonEditApi"
+        app:srcCompat="@drawable/baseline_delete_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

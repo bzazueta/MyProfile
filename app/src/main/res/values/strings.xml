@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MyProfile</string>
+    <string name="default_notification_channel_id">default chanel</string>
+    <string name="msg_token_fmt">tokenFirebase</string>
+    <string name="notification_success">Notificación enviada.</string>
+    <string name="notification_failure">Notificación no enviada.</string>
+    <string name="urlimage_profile_firebase">Imagen guardada.</string>
+    <string name="error_urlimage_profile_firebase">Error al guardar la imagen.</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="text_map" tools:ignore="ExtraTranslation">He desarrollado una actividad con mapa para que puedas ver el funcionamiento e implementación.</string>
+    <string name="text_flutter" tools:ignore="ExtraTranslation">He desarrollado varias aplicaciones para clientes y empresas donde e laborado. Puedes ver una aplicación que desarrolle para el control de accesos para el fraccionamiento donde vivo</string>
+
+</resources>
