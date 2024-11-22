@@ -95,19 +95,7 @@ class BottomSheetDialog(text_:String,technology_:String,tknFrb_ : String,telegra
         return v
     }
 
-//    override fun onStart() {
-//        super.onStart()
-//        val bottomSheetDialog = dialog as BottomSheetDialog?
-//        bottomSheetDialog?.dialog?.setOnShowListener {
-//            val d = dialog as BottomSheetDialog
-//            val bottomSheet: View =
-//                d.requireView().findViewById(com.google.android.material.R.id.design_bottom_sheet)
-//            if (bottomSheet != null) {
-//                val behavior = BottomSheetBehavior.from(bottomSheet)
-//                behavior.isDraggable = false // Disable dragging
-//            }
-//        }
-//    }
+
 
     fun shareMessageWhatsApp(message :String){
 

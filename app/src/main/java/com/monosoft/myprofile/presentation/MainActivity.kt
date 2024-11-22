@@ -270,11 +270,7 @@ class MainActivity : AppCompatActivity() {
                 object : RecyclerTouchListener.ClickListener {
                     override fun onClick(view: View, position: Int) {
                         val selected = listFrameworksLanguage[position]
-                        Toast.makeText(
-                            this@MainActivity,
-                            "posicion" + selected.technology,
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                         if(selected.technology.equals("Api Backend"))
                         {
                             val intent = Intent(this@MainActivity, ApiActivity::class.java)

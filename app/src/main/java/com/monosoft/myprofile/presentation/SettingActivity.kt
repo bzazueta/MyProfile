@@ -1,6 +1,8 @@
 package com.monosoft.myprofile.presentation
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,10 +21,26 @@ class SettingActivity : AppCompatActivity() {
 
     lateinit var bindind : ActivitySettingBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindind = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(bindind.root)
+
+        try {
+            val packageInfo = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                packageManager.getPackageInfo(packageName, 0).longVersionCode
+            } else {
+                packageManager.getPackageInfo(packageName, 0).versionName
+            }
+
+            println("Version Code: $packageInfo")
+
+            bindind.lblVersion.setText("version ${packageInfo.toString()}")
+
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+        }
 
         bindind.imageView.setOnClickListener {
             finish()

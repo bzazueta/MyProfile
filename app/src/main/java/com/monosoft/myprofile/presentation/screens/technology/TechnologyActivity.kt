@@ -10,6 +10,7 @@ import com.monosoft.myprofile.R
 import com.monosoft.myprofile.databinding.ActivityTechnologyBinding
 import com.monosoft.myprofile.presentation.screens.apps.AppsActivity
 import com.monosoft.myprofile.presentation.screens.maps.MapsActivity
+import com.monosoft.myprofile.presentation.util.Constant
 import com.monosoft.myprofile.presentation.util.Technology
 
 class TechnologyActivity : AppCompatActivity() {
@@ -81,6 +82,13 @@ class TechnologyActivity : AppCompatActivity() {
             finish()
         }
 
+        bindin.cardMyAcceso.setOnClickListener {
+            val intent = Intent(this@TechnologyActivity, AppsActivity::class.java)
+            intent.putExtra("technology", Technology.FLUTTER.type)
+            intent.putExtra("nameApp", Constant.MYACCESO)
+            startActivity(intent)
+        }
+
 
 
     }
@@ -123,6 +131,7 @@ class TechnologyActivity : AppCompatActivity() {
             Technology.GOOGLEMAPS.type->{
                 bindin.lblInfoT.visibility= View.VISIBLE
                 bindin.lblVerT.visibility= View.VISIBLE
+                bindin.cardMyAcceso.visibility=View.GONE
                 bindin.lblInfoT.setText(getString(R.string.text_map))
             }
             Technology.API.type->{
@@ -139,8 +148,15 @@ class TechnologyActivity : AppCompatActivity() {
             }
             Technology.FLUTTER.type->{
                 bindin.lblInfoT.visibility= View.VISIBLE
-                bindin.lblVerT.visibility= View.VISIBLE
+                bindin.lblVerT.visibility= View.GONE
                 bindin.lblVerT.text= "Ver Apps"
+                bindin.lblInfoT.setText(getString(R.string.text_flutter))
+            }
+            Technology.DATABASE.type->{
+                bindin.lblInfoT.visibility= View.VISIBLE
+                bindin.lblVerT.visibility= View.GONE
+                bindin.lblVerT.text= "Ver Apps"
+                bindin.cardMyAcceso.visibility=View.GONE
                 bindin.lblInfoT.setText(getString(R.string.text_flutter))
             }
         }

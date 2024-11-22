@@ -3,6 +3,7 @@ package com.monosoft.myprofile.presentation.screens.api
 import android.R
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -84,16 +85,30 @@ class ApiActivity : AppCompatActivity() {
         }
 
         binding.lblGitNodeJsApi.setOnClickListener {
+            try {
+                val urlIntent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://github.com/bzazueta/ecommerce-backend-benja")
+                )
+                startActivity(urlIntent)
 
-            val urlIntent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://github.com/bzazueta/ecommerce-backend-benja")
-            )
-            startActivity(urlIntent)
+            } catch (e: ActivityNotFoundException) {
+                e.toString()
+                showSnackBar("Ocurrio un Error. Revisa si cuentas con un navegador para abrir la pagina")
+            }
         }
 
         binding.lblGitPhpApi.setOnClickListener {
-
+            try{
+                val urlIntent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://github.com/bzazueta/apiProfile")
+                )
+                startActivity(urlIntent)
+            } catch (e: ActivityNotFoundException) {
+                 e.toString()
+                showSnackBar("Ocurrio un Error. Revisa si cuentas con un navegador para abrir la pagina")
+            }
         }
 
         lifecycleScope.launch {

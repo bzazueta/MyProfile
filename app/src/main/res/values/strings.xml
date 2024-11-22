@@ -9,5 +9,7 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="text_map" tools:ignore="ExtraTranslation">He desarrollado una actividad con mapa para que puedas ver el funcionamiento e implementación.</string>
     <string name="text_flutter" tools:ignore="ExtraTranslation">He desarrollado varias aplicaciones para clientes y empresas donde e laborado. Puedes ver una aplicación que desarrolle para el control de accesos para el fraccionamiento donde vivo</string>
-
+    <string name="text_apps" tools:ignore="ExtraTranslation">Puedes ver varias aplicaciones que he desarrollado para clientes y empresas donde e laborado. Puedes dar click en las imágenes</string>
+    <string name="myacceso_appstore" >https://apps.apple.com/us/app/myacceso/id1668941734</string>
+    <string name="myacceso_playstore" >https://apps.apple.com/us/app/myacceso/id1668941734</string>
 </resources>

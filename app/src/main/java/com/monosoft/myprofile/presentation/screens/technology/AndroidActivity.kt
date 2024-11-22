@@ -138,10 +138,10 @@ class AndroidActivity : AppCompatActivity() {
             }
             Technology.ANDROID.type->{
                 bindin.lblInfoT.visibility= View.VISIBLE
-                bindin.lblVerT.visibility= View.VISIBLE
+                bindin.lblVerT.visibility= View.INVISIBLE
                 bindin.lblVerT.text= "Ver Apps"
                 bindin.lblInfoT.setTextColor(getColor(R.color.green400))
-                bindin.lblInfoT.setText(getString(R.string.text_flutter))
+                bindin.lblInfoT.setText(getString(R.string.text_apps))
                 bindin.lblInfoT.setBackgroundResource(R.drawable.bordes_textview_green)
 
             }

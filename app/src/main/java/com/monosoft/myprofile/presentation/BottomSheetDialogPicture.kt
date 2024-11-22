@@ -154,21 +154,7 @@ class BottomSheetDialogPicture(text_:String, technology_:String, firebaseViewMod
         {
             e.toString()
         }
-//        try {
-//            flujo = "camara"
-//            val camera_intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-//            // Start the activity with camera_intent, and request pic id
-//            // Start the activity with camera_intent, and request pic id
-//            startActivityForResult(camera_intent, 1)
-////           Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
-////               intent.resolveActivity(packageManager)?.also {
-////                   startActivityForResult(intent, 123)
-////               }
-////           }
-//        }catch(e : Exception)
-//        {
-//            e.toString()
-//        }
+
     }
 
     fun createImageFile(context: Context): File {
@@ -223,29 +209,6 @@ class BottomSheetDialogPicture(text_:String, technology_:String, firebaseViewMod
 
     private fun checkCameraPermission() {
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES)
-//                != PackageManager.PERMISSION_GRANTED
-//            ) {
-//                ActivityCompat.requestPermissions(
-//                    this,
-//                    arrayOf(Manifest.permission.READ_MEDIA_IMAGES),
-//                    REQUEST_PERMISSION
-//                )
-//            }
-//
-//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_AUDIO)
-//                != PackageManager.PERMISSION_GRANTED
-//            ) {
-//                ActivityCompat.requestPermissions(
-//                    this,
-//                    arrayOf(Manifest.permission.READ_MEDIA_AUDIO),
-//                    REQUEST_PERMISSION
-//                )
-//            }
-//        }
-//        else
-//        {
         if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA)
             != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(activity,
@@ -261,7 +224,6 @@ class BottomSheetDialogPicture(text_:String, technology_:String, firebaseViewMod
         if (ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 1)
         }
-        // }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

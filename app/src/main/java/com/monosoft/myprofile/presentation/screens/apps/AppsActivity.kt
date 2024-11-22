@@ -1,9 +1,13 @@
 package com.monosoft.myprofile.presentation.screens.apps
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
@@ -48,7 +52,31 @@ class AppsActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.buttonAppStore.setOnClickListener {
+            if(app.equals("MYACCESO")) {
+                val urlIntent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://apps.apple.com/us/app/myacceso/id1668941734")
+                )
+                startActivity(urlIntent)
+            }
+        }
 
+        binding.buttonPlayStore.setOnClickListener {
+            if(app.equals("ECOMMERCE"))
+            {
+
+            }
+            if(app.equals("MYACCESO"))
+            {
+                val urlIntent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://play.google.com/store/apps/details?id=com.monosoft.myacceso")
+                )
+                startActivity(urlIntent)
+            }
+
+        }
     }
 
     override fun onPause() {
@@ -91,6 +119,9 @@ class AppsActivity : AppCompatActivity() {
             Technology.ANDROID.type->{
                 if(app.equals("ECOMMERCE"))
                 {
+                    binding.buttonPlayStore.visibility = View.GONE
+                    binding.buttonAppStore.visibility = View.GONE
+                    binding.buttonGitHub.visibility = View.GONE
                     imageList.add(R.drawable.ecommerce1)
                     imageList.add(R.drawable.ecommerce2)
                     imageList.add(R.drawable.ecommerce3)
@@ -116,8 +147,10 @@ class AppsActivity : AppCompatActivity() {
 
 
             }
-            Technology.FLUTTER.type->{
 
+            Technology.FLUTTER.type->{
+                binding.buttonPlayStore.visibility = View.GONE
+                binding.buttonAppStore.visibility = View.VISIBLE
                 imageList.add(R.drawable.inicio)
                 imageList.add(R.drawable.login)
                 imageList.add(R.drawable.dashboard)
@@ -127,6 +160,16 @@ class AppsActivity : AppCompatActivity() {
                 imageList.add(R.drawable.usuarios)
                 imageList.add(R.drawable.crearusuario)
                 imageList.add(R.drawable.usuariodetalle)
+
+                textList.add("Myacceso App")
+                textList.add("Login")
+                textList.add("Dashboard Informativo")
+                textList.add("Funciones")
+                textList.add("Creación de QR")
+                textList.add("Código verificado")
+                textList.add("Usuarios")
+                textList.add("Crear usuarios")
+                textList.add("Usuarios detalles")
             }
         }
 

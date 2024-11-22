@@ -1,236 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.screens.technology.AndroidActivity">
+    android:fillViewport="true"
+    >
 
-    <TextView
-        android:id="@+id/lblTechnologyT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Android Studio"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        tools:context=".presentation.screens.technology.AndroidActivity">
 
-    <ImageView
-        android:id="@+id/imageTech"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/lblTechnologyT"
-        app:layout_constraintStart_toEndOf="@+id/lblTechnologyT"
-        app:layout_constraintTop_toTopOf="@+id/lblTechnologyT"
-        app:srcCompat="@drawable/android_white" />
-
-    <TextView
-        android:id="@+id/lblTextT"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/lblTechnologyT"
-        app:layout_constraintTop_toBottomOf="@+id/lblTechnologyT" />
-
-    <TextView
-        android:id="@+id/lblTextT2"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT" />
-
-    <TextView
-        android:id="@+id/lblTextT3"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT2" />
-
-    <TextView
-        android:id="@+id/lblTextT4"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT3" />
-
-    <TextView
-        android:id="@+id/lblTextT5"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT4" />
-
-    <TextView
-        android:id="@+id/lblTextT6"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT5" />
-
-    <TextView
-        android:id="@+id/lblTextT7"
-        style="@style/text_technology"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/gray200"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT6" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/baseline_arrow_circle_left_24"
-        android:backgroundTint="@color/green400"
-        android:tint="@color/green400"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/lblInfoT"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/bordes_textview_green"
-        android:drawableLeft="@drawable/baseline_android_24"
-        android:drawablePadding="4dp"
-        android:padding="8dp"
-        android:textColor="@color/blueA200"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTextT7" />
-
-    <TextView
-        android:id="@+id/lblVerT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/green50"
-        android:fontFamily="sans-serif-medium"
-        android:padding="8dp"
-        android:text="Ver Mapa"
-        android:textColor="@color/green400"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblInfoT" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardMyAcceso"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblInfoT">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/lblTechnologyT"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Android Studio"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/residencialcasa" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:id="@+id/imageTech"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblTechnologyT"
+            app:layout_constraintStart_toEndOf="@+id/lblTechnologyT"
+            app:layout_constraintTop_toTopOf="@+id/lblTechnologyT"
+            app:srcCompat="@drawable/android_white" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardEcommerce"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="5dp"
-        app:layout_constraintStart_toEndOf="@+id/cardMyAcceso"
-        app:layout_constraintTop_toBottomOf="@+id/lblInfoT">
+        <TextView
+            android:id="@+id/lblTextT"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lblTechnologyT"
+            app:layout_constraintTop_toBottomOf="@+id/lblTechnologyT" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/lblTextT2"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT" />
+
+        <TextView
+            android:id="@+id/lblTextT3"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT2" />
+
+        <TextView
+            android:id="@+id/lblTextT4"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT3" />
+
+        <TextView
+            android:id="@+id/lblTextT5"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT4" />
+
+        <TextView
+            android:id="@+id/lblTextT6"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT5" />
+
+        <TextView
+            android:id="@+id/lblTextT7"
+            style="@style/text_technology"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray200"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT6" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/baseline_arrow_circle_left_24"
+            android:backgroundTint="@color/green400"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/green400" />
+
+
+        <TextView
+            android:id="@+id/lblInfoT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bordes_textview_green"
+            android:drawableLeft="@drawable/baseline_android_24"
+            android:drawablePadding="4dp"
+            android:padding="8dp"
+            android:textColor="@color/blueA200"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTextT7" />
+
+        <TextView
+            android:id="@+id/lblVerT"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/green50"
+            android:fontFamily="sans-serif-medium"
+            android:padding="8dp"
+            android:text="Ver Mapa"
+            android:textColor="@color/green400"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblInfoT" />
 
-            <ImageView
-                android:id="@+id/imageEcommerce"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMyAcceso"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblInfoT">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/logo_app" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif-light"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="MyAcceso"
-        android:textColor="@color/green400"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cardMyAcceso"
-        app:layout_constraintStart_toStartOf="@+id/cardMyAcceso"
-        app:layout_constraintTop_toBottomOf="@+id/cardMyAcceso" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/residencialcasa" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif-light"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="E-Shop"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/cardEcommerce"
-        app:layout_constraintStart_toStartOf="@+id/cardEcommerce"
-        app:layout_constraintTop_toBottomOf="@+id/cardEcommerce" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardEcommerce"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toEndOf="@+id/cardMyAcceso"
+            app:layout_constraintTop_toBottomOf="@+id/lblInfoT">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageEcommerce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/logo_app" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="MyAcceso"
+            android:textColor="@color/green400"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardMyAcceso"
+            app:layout_constraintStart_toStartOf="@+id/cardMyAcceso"
+            app:layout_constraintTop_toBottomOf="@+id/cardMyAcceso" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="E-Shop"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardEcommerce"
+            app:layout_constraintStart_toStartOf="@+id/cardEcommerce"
+            app:layout_constraintTop_toBottomOf="@+id/cardEcommerce" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
